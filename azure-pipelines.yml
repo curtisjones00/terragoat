@@ -1,4 +1,11 @@
 # Docker
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'snyk'
+    testType: 'app'
+    severityThreshold: 'medium'
+    monitorWhen: 'always'
+    failOnIssues: true
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
